@@ -30,7 +30,7 @@ public class ClassLoaderTest {
      */
     @Test
     public void showAppClassPathTest() {
-        APP app = new APP();
+        App app = new App();
         printlnPath(app.showClassPath());
     }
 
@@ -42,7 +42,7 @@ public class ClassLoaderTest {
         ClassLoader currentClassLoader = ClassLoaderTest.class.getClassLoader();
         System.out.println(currentClassLoader.toString());  // AppClassLoader
         System.out.println(currentClassLoader.getParent().toString());  // ExtClassLoader
-        System.out.println(currentClassLoader.getParent().getParent().toString());  // null, 从源码ExtClassLoader类的无参构造可以看出
+        System.out.println(currentClassLoader.getParent().getParent());  // null, 从源码ExtClassLoader类的无参构造可以看出
     }
 
     /**
