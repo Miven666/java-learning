@@ -18,6 +18,10 @@ class ClassExample {
         return this.clazz.getName();
     }
 
+    /**
+     * 获取类名
+     * @return 类名
+     */
     String getSimpleNameMethod() {
         return this.clazz.getSimpleName();
     }
