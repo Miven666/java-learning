@@ -26,3 +26,9 @@
     4) 下一层加载器（ExtClassLoader）接收到通知，查找自己指定加载路径（java.ext.dirs）是否有字节码，若有则返回，没有通知下一层
     4) 下一层加载器（AppClassLoader）接收到通知，查找自己指定加载路径（）是否有字节码，若有则返回，没有通知下一层
 - 参考地址 https://www.cnblogs.com/gdpuzxs/p/7044963.html
+
+## Class
+### getName()
+    获取类名（含包路径）
+### getSimpleName()
+    获取类名
