@@ -47,9 +47,9 @@ public class ClassLoaderTest {
 
     /**
      * 打印输出路径
-     * @param path
+     * @param path 路径
      */
-    public void printlnPath(String path) {
+    private void printlnPath(String path) {
         String[] split = path.split(";");
         for (String s : split) {
             System.out.println(s);
