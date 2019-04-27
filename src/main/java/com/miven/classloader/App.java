@@ -5,13 +5,13 @@ package com.miven.classloader;
  * @author mingzhi.xie
  * @date 2018/12/17.
  */
-public class App {
+class App {
 
     /**
      * 查看加载的路径
-     * @return
+     * @return 路径
      */
-    public String showClassPath() {
+    String showClassPath() {
         return System.getProperty("java.class.path");
     }
 }
