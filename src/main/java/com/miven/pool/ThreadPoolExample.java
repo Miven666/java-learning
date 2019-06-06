@@ -8,9 +8,9 @@ import java.util.concurrent.*;
  * @author mingzhi.xie
  * @date 2019/4/23.
  */
-class ThreadPoolExample {
+public class ThreadPoolExample {
 
-    ThreadPoolExecutor createThreadPoolExecutor() {
+    public ThreadPoolExecutor createThreadPoolExecutor() {
         // init params
         int corePoolSize = 5;
         int maximumPoolSize = 15;
