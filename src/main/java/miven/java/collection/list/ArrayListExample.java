@@ -5,6 +5,7 @@ package miven.java.collection.list;
  *
  * @author mingzhi.xie
  * @date 2019/4/21
+ * @see java.util.ArrayList
  */
 class ArrayListExample {
 
