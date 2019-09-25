@@ -1,5 +1,7 @@
 package miven.java.collection.list;
 
+import java.util.Objects;
+
 /**
  * 水果
  *
@@ -8,8 +10,44 @@ package miven.java.collection.list;
  */
 public class Apple implements Call {
 
-    @Override
-    public String name() {
-        return "I'm name is Apple";
+    int id;
+
+    String name;
+
+    Apple() {
+        this.name = "I'm name is Apple";
     }
+
+    Apple(int id) {
+        this.id = id;
+        this.name = "I'm name is Apple";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Apple apple = (Apple) o;
+        return id == apple.id &&
+                Objects.equals(name, apple.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
+
+    @Override
+    public String call() {
+        return name;
+    }
+
 }

@@ -6,10 +6,9 @@ package miven.java.collection.list;
  * @author mingzhi.xie
  * @date 2019/4/22.
  */
-public class GreenApple extends Apple {
+class GreenApple extends Apple {
 
-    @Override
-    public String name() {
-        return "I'm name is GreenApple";
+    GreenApple() {
+        name = "I'm name is GreenApple";
     }
 }

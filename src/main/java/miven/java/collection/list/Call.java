@@ -12,5 +12,5 @@ public interface Call {
      * 名字
      * @return name
      */
-    String name();
+    String call();
 }
