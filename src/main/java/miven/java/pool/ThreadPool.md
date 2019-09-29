@@ -2,7 +2,7 @@
 
 ## 线程池状态
 
-![image](http://oss-static.hz5800.com/201904/867510b3f063818c0023f3a26d736b4bf0a2dd8b853e4b233c321f7a5debab93.png)
+![image](ThreadPoolStateActive.png)
 
 - 运行态 `RUNNING`
     + 接受新任务并处理阻塞队列的任务
