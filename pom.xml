@@ -27,6 +27,7 @@
         <apache.commons.lang3.version>3.9</apache.commons.lang3.version>
 
         <plugin.versions.version>2.7</plugin.versions.version>
+        <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
     </properties>
 
     <dependencyManagement>
@@ -61,6 +62,19 @@
                     <configuration>
                         <generateBackupPoms>false</generateBackupPoms>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${plugin.enforcer.version}</version>
+                    <executions>
+                        <execution>
+                            <id>enforce</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
