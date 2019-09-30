@@ -25,6 +25,8 @@
         <javaee.version>8.0.1</javaee.version>
         <junit.version>4.12</junit.version>
         <apache.commons.lang3.version>3.9</apache.commons.lang3.version>
+
+        <plugin.versions.version>2.7</plugin.versions.version>
     </properties>
 
     <dependencyManagement>
@@ -48,4 +50,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>${plugin.versions.version}</version>
+                    <configuration>
+                        <generateBackupPoms>false</generateBackupPoms>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

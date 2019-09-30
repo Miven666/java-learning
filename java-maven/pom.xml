@@ -12,5 +12,13 @@
 
     <artifactId>java-maven</artifactId>
 
-
+    <build>
+        <plugins>
+            <!--统一修改版本号插件-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
