@@ -9,7 +9,6 @@
     <version>1.0</version>
     <packaging>pom</packaging>
     <description>Java 学习</description>
-    <name>Java learn parent ${project.version}</name>
 
     <modules>
         <module>java-maven</module>
@@ -18,36 +17,25 @@
     </modules>
 
     <properties>
+        <java.version>1.8</java.version>
         <file.encoding>UTF-8</file.encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <javaee.version>8.0.1</javaee.version>
-        <junit.version>4.12</junit.version>
-        <apache.commons.lang3.version>3.9</apache.commons.lang3.version>
 
-        <plugin.versions.version>2.7</plugin.versions.version>
-        <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
+        <miven.version>1.0</miven.version>
+
+        <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
+        <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>javax</groupId>
-                <artifactId>javaee-api</artifactId>
-                <version>${javaee.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${apache.commons.lang3.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
+                <groupId>miven.java</groupId>
+                <artifactId>miven-dependencies-parent</artifactId>
+                <version>${miven.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -58,7 +46,7 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
-                    <version>${plugin.versions.version}</version>
+                    <version>${versions-maven-plugin.version}</version>
                     <configuration>
                         <generateBackupPoms>false</generateBackupPoms>
                     </configuration>
@@ -66,7 +54,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>${plugin.enforcer.version}</version>
+                    <version>${maven-enforcer-plugin.version}</version>
                     <executions>
                         <execution>
                             <id>enforce</id>
