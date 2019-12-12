@@ -19,3 +19,5 @@ JDK动态代理是基于接口代理的，因此被代理类最好显示实现�
   需要对象实现 Serializable(IO 流的方式)或 重写 clone() 方法。
   已知框架 commons-lang3 中 SerializationUtils#clone() 方法.
     ```
+ ## 并发修改异常（ConcurrentModificationException） 
+- 集合截取：截取之后，一旦原集合新增或删除元素（更新不影响），则子集合不可再操作（新增、修改、删除），主要是影响背后数组的索引

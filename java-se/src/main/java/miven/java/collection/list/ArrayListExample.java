@@ -21,7 +21,7 @@ class ArrayListExample {
      * @param <T> T
      * @return true:有，false:没有
      */
-    <T> boolean hasInterface(T t, Class clazz) {
+    <T> boolean hasInterface(T t, Class<?> clazz) {
         Class<?>[] interfaces = t.getClass().getInterfaces();
         for (Class<?> c : interfaces) {
             if (c.equals(clazz)) {
@@ -40,7 +40,7 @@ class ArrayListExample {
         System.out.println("原数组的 hashCode: " + list.hashCode());
         System.out.println("原数组内部元素 Apple 的 id 为" + list.get(0).id + "、" + list.get(1).id);
 
-        ArrayList<Apple> clone = (ArrayList) list.clone();
+        ArrayList<Apple> clone = (ArrayList<Apple>) list.clone();
         ArrayList<Apple> constructList = new ArrayList<>(list);
         HashSet<Apple> constructSet = new HashSet<>(list);
         System.out.println("克隆数组内部元素 Apple 的 id 为 " + list.get(0).id + "、" + list.get(1).id);
