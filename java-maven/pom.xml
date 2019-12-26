@@ -37,6 +37,11 @@
                     </rules>
                 </configuration>
             </plugin>
+            <!--定制化打包插件-->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
         </plugins>
     </build>
 </project>
