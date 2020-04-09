@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  */
 public class ThreadPoolExample {
 
-    public ThreadPoolExecutor createThreadPoolExecutor() {
+    public static ThreadPoolExecutor createThreadPoolExecutor() {
         // init params
         int corePoolSize = 5;
         int maximumPoolSize = 15;
@@ -21,5 +21,13 @@ public class ThreadPoolExample {
 
         return new ThreadPoolExecutor(
                 corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.SECONDS, workQueue, threadFactory, handler);
+    }
+
+    public static ScheduledThreadPoolExecutor createScheduledThreadPoolExecutor() {
+        int corePoolSize = 5;
+        ThreadFactory threadFactory = Executors.defaultThreadFactory();
+        RejectedExecutionHandler handler = new ThreadPoolExecutor.AbortPolicy();
+
+        return new ScheduledThreadPoolExecutor(corePoolSize, threadFactory, handler);
     }
 }
