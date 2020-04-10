@@ -11,4 +11,11 @@
     <packaging>jar</packaging>
 
     <artifactId>java-ee</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>
