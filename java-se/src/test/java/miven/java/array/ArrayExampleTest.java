@@ -59,14 +59,13 @@ public class ArrayExampleTest {
         List<Integer> subList = list.subList(2, list.size());
         System.out.println(subList);
 
-        // 截取之后，一旦原集合新增或删除元素，则子集合不可再操作（新增、修改、删除）
+        // 截取之后，一旦原集合新增或删除元素，影响了背后数组的索引，会发生并发修改异常
         // list.add(88);
-        list.remove(1);
+        // list.remove(1);
 
         // 更新不影响
         list.set(1, 99);
 
-        // 此处会发生并发修改异常，主要是影响背后数组的索引
         // subList.add(100);
         // subList.remove(1);
         subList.set(1, 55);
