@@ -3,7 +3,7 @@ package miven.java.concurrent;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * 倒数锁
+ * 递减计数锁
  * @author mingzhi.xie
  * @date 2020/4/20
  * @since 1.0

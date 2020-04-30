@@ -22,12 +22,12 @@ public class VolatileExample {
     /**
      * 线程数
      */
-    private int threadNum = 10;
+    private final int threadNum = 10;
 
     /**
      * 单线程自增次数
      */
-    private int increaseNum = 1000;
+    private final int increaseNum = 1000;
 
     /**
      * 通过 synchronized 保证自增的原子性
@@ -38,7 +38,7 @@ public class VolatileExample {
     }
     public static void main(String[] args) {
         final VolatileExample example = new VolatileExample();
-        ThreadPoolExecutor executor = new ThreadPoolExample().createThreadPoolExecutor();
+        ThreadPoolExecutor executor = ThreadPoolExample.createThreadPoolExecutor();
 
         for (int i = 0; i < example.threadNum; i++) {
             executor.execute(() -> {
@@ -52,7 +52,7 @@ public class VolatileExample {
 
         }
 
-        //保证前面的线程都执行完
+        //有序关闭，在此过程中执行以前提交的任务，但不接受任何新任务
         executor.shutdown();
         while (true) {
             if (executor.isTerminated()) {

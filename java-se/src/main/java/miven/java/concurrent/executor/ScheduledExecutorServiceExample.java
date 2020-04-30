@@ -12,8 +12,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @since 1.0
  */
 public class ScheduledExecutorServiceExample {
-
-    static volatile AtomicInteger i = new AtomicInteger(1);
+    // 保证i在多个线程中（包括主线程）的安全
+    static AtomicInteger i = new AtomicInteger(1);
 
     public static void main(String[] args) {
         ScheduledThreadPoolExecutor executor = ThreadPoolExample.createScheduledThreadPoolExecutor();
