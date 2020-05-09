@@ -6,5 +6,5 @@ package miven.java.annotation;
  * @date 2019/9/11
  * @since 1.0
  */
-class Son extends Father implements Man{
+class Son extends Father implements Man {
 }
