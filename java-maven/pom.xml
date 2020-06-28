@@ -26,6 +26,8 @@
     <build>
         <plugins>
             <!--统一修改版本号插件-->
+            <!--修改 mvn versions:set -DnewVersion=xxx-->
+            <!--回滚 mvn versions:revert-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
