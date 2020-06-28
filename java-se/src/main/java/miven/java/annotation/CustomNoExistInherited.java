@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * @date 2019/9/11
  * @since 1.0
  */
-@Target(ElementType.TYPE)
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @interface CustomNoExistInherited {
 }
