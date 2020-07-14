@@ -2,7 +2,7 @@
 
 ## 线程池状态
 
-![ThreadPoolStateActive](ThreadPoolStateActive.png)
+![ThreadPoolStateActive](../images/ThreadPoolStateActive.png)
 
 - 运行态 `RUNNING`
     + 接受新任务并处理阻塞队列的任务
