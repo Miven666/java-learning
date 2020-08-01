@@ -2,6 +2,9 @@ package miven.java.clazz;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * ClassExample测试类
  */
@@ -23,5 +26,13 @@ public class ClassExampleTest {
     @Test
     public void showGetSimpleNameMethod() {
         System.out.println(this.classExample.getSimpleNameMethod());
+    }
+
+    @Test
+    public void TestAssignable() {
+        // false
+        System.out.println(ArrayList.class.isAssignableFrom(List.class));
+        // true
+        System.out.println(List.class.isAssignableFrom(ArrayList.class));
     }
 }
