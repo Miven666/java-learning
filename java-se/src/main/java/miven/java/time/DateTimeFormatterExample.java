@@ -1,9 +1,7 @@
 package miven.java.time;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -30,5 +28,23 @@ class DateTimeFormatterExample {
         long millis = System.currentTimeMillis();
         System.out.println("当前时间毫秒值 currentTimeMillis: " + millis);
         System.out.println("当前时间时间戳 timestamp: " + new Timestamp(millis));
+    }
+
+    public static void initIntervalTime() {
+        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("HH:mm:ss");
+        Duration duration = Duration.ofMinutes(30);
+        LocalTime startTime = LocalTime.of(8, 0);
+        for (LocalTime time = startTime;
+             time.compareTo(startTime) >= 0;
+             time = time.plusSeconds(duration.getSeconds())) {
+            LocalTime endTime = time.plusSeconds(duration.minusSeconds(1).getSeconds());
+            if (endTime.compareTo(startTime) <= 0) {
+                endTime = LocalTime.of(23, 59, 59);
+            }
+            System.out.println(time.format(pattern) + "-" + endTime.format(pattern));
+        }
+
+        System.out.println(LocalDate.now().toString());
+
     }
 }

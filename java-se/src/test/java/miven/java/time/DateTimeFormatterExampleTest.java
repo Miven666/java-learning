@@ -8,4 +8,9 @@ public class DateTimeFormatterExampleTest {
     public void formatTime() {
         DateTimeFormatterExample.formatTime();
     }
+
+    @Test
+    public void initIntervalTime() {
+        DateTimeFormatterExample.initIntervalTime();
+    }
 }
