@@ -48,6 +48,24 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.1</version>
             </plugin>
+            <!--定制化 MANIFEST.MF-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <!--MANIFEST.MF 添加 Implementation-Version 等默认属性-->
+                            <!--有 Implementation-Version 属性 Package 的 getImplementationVersion() 才能生效-->
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                        <manifestEntries>
+                            <!--自定义 MANIFEST.MF 属性-->
+                            <aaa>bbb</aaa>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
