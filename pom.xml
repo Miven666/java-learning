@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>miven.java</groupId>
-    <artifactId>Java-learning</artifactId>
+    <artifactId>java-learning</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <description>Java 学习</description>
